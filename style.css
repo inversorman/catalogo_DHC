@@ -1,0 +1,215 @@
+/*SELECTORES POR ETIQUETAS*/
+/* IMPORTACION DE FUENTES EXTERNAS */
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Figtree:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Architects+Daughter&family=Figtree:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Noto+Serif+Georgian:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&display=swap');
+html {
+  scroll-behavior: smooth; /* suaviza el desplazamiento del scroll */
+}
+h1 {
+  font-size: 67px;
+  word-spacing: 5px;
+  margin-bottom: 20px;
+  color: var(--color-blancoAzulado);
+}
+
+h2 {
+  font-size: 37px;
+  margin-bottom: 20px;
+  font-family: "Figtree", sans-serif;
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+li {
+  color: var(--color-grisOscuro);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 2em;
+}
+
+img {
+  display: block; /* elimina el espacio que aparace automaticamente debajo de una imagen */
+}
+
+/*SELECTOR UNIVERSAL*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* evita que una caja cambie de tamaño(ancho y alto) cuando se le agregue un padding o borde con esto se soluciona la falta de espacio para que se accomde las fotos en filas de 4 en la seccion docentes */
+}
+
+.espaciado {
+  /* esta clase agrega un espacio arriba y abajo del contenido de la seccion */
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.contenedor {
+  /* es la caja que usamos para que el contenido no ocupe todo el espacio */
+  max-width: 90%; /*porcentaje que va ocupar */
+  margin: auto; /*centrado */
+}
+
+.imgfluid {
+  /* ajusta la imagen al ancho de su caja padre */
+  width: 100%;
+}
+
+.row {
+  /* clase para la caja padre ( se puede poner cualquier nombre pero se recomienda row por bootstrap */
+  display: flex; /* Actuva flexbox */
+  flex-direction: row; /* Aalinea el contenido en forma horizontal */
+  flex-wrap: wrap; /* permite  que el flexbox sea multifila*/
+}
+.column {
+  display: flex; /* Actuva flexbox */
+  flex-direction: column; /* Aalinea el contenido en forma vertical */
+}
+.col {
+  /* clase para las cajas hijo ( se puede poner cualquier nombre pero se recomienda row por bootstrap */
+  flex-basis: 0; /* Ancho de las cajas flexibles */
+  flex-grow: 1; /* las dos propiedades hace que las cajas hijo tengan el mismo ancho */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col_50 {
+  /* este estilo se ha creado para ordenar las fotos de la seccion ofertas 16.666 es porque eso sale de dividir 100 entre las 6 fotos que quiero por fila*/
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.col-25 {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.col-75 {
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.col_33 {
+  /* este estilo se ha creado para ordenar las fotos de la seccion ofertas 16.666 es porque eso sale de dividir 100 entre las 6 fotos que quiero por fila*/
+  flex-basis: 33.33%;
+  max-width: 33.33%;
+}
+
+.col_16 {
+  /* este estilo se ha creado para ordenar las fotos de la seccion ofertas 16.666 es porque eso sale de dividir 100 entre las 6 fotos que quiero por fila*/
+  flex-basis: 16.666%;
+  max-width: 16.666%;
+}
+
+.col_66 {
+  flex-basis: 66.66%;
+  max-width: 66.66%;
+}
+
+.col_100 {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+.image_cat {
+  border-style: groove;
+  border-width: 1px;
+  border-color: var(--color-blancoAzulado);
+  box-shadow: 10px 10px 10px 10px rgba(128, 128, 128, 0.529);
+}
+
+#banner{                                      
+  /* size: 100px; */
+  /* background-image: url('/images/banner1.jpg'); */
+  background: linear-gradient(90deg, rgba(73, 76, 83, 0.185) 40%, rgba(64, 66, 71, 0.788) 100%),url('/images/imagaen_baner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+}
+.banner_box{
+  width: 1000px;                     /* esta clase le da formato a la caja del banner */
+  height: 300px;
+  margin: auto;  
+  
+}
+
+.titulo_banner{                       /* esta clase le da estilo al titulo del banner */
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center; 
+  color: white;
+}
+
+.espaciado_banner{                 /* esta clase le da espacio al contenido del banner */
+  padding-top:50px;
+  padding-bottom: 50px;
+}
+
+.texto_banner{   
+  padding-top: 20px;                             /* esta clase le da estilo al texto del banner */
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+  color: rgb(233, 218, 6);  
+  text-align: center;
+}
+
+.titulo_galeria{                           /* esta clase le da estilo al titulo de la seccion ofertas */
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* ESTILO PARA FORMATEAR LA SECCION GARANTIA*/
+
+.garantia{                                      /* esta clase le da estilo a la seccion garantía */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width:70%;
+  margin: auto;    
+  padding-top:10px;
+  
+}
+
+.garantia_contenido{                             /* esta clase le da estilo al texto de la seccion garantia */
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: baseline;
+  margin-left: 20px;  
+}
+
+.texto_garantia{                         /* esta clase le da estilo al parrafo de la seccion garantia */
+ 
+  font-size: 13px;
+  padding-top: 2px;
+}
+
+.titulo_garantia{                        /* esta clase le da estilo a los titulos de la seccion garantia */
+  line-height: 1em;     
+}
+
+.icon{                                 /* esta clase le da estilo a las imagenes de la seccion garantia */
+  justify-content: center;
+  margin-bottom: 20px;
+  color: rgb(17, 0, 255);
+}
