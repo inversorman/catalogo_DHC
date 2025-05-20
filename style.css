@@ -5,6 +5,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Architects+Daughter&family=Figtree:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Noto+Serif+Georgian:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&display=swap');
+
+/* Selector universal de los elementos HTML */
+* {
+    /* Eliminan los espacios y margenes predeterminados */
+    margin: 0;
+    padding: 0;
+
+    /* Evitar que una caja cambie de tamaño (ancho y altura) cuando
+    se le agregue el padding o el borde */
+    box-sizing: border-box;
+}
+
+
 html {
   scroll-behavior: smooth; /* suaviza el desplazamiento del scroll */
 }
@@ -68,7 +81,8 @@ img {
 
 .imgfluid {
   /* ajusta la imagen al ancho de su caja padre */
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .row {
@@ -89,7 +103,7 @@ img {
   padding-right: 15px;
 }
 
-.col_50 {
+.col-50 {
   /* este estilo se ha creado para ordenar las fotos de la seccion ofertas 16.666 es porque eso sale de dividir 100 entre las 6 fotos que quiero por fila*/
   flex-basis: 50%;
   max-width: 50%;
@@ -171,6 +185,10 @@ img {
   text-align: center;
 }
 
+#ofertas .col{
+  margin-bottom:30px ;
+}
+
 .titulo_galeria{                           /* esta clase le da estilo al titulo de la seccion ofertas */
   text-align: center;
   margin-top: 20px;
@@ -212,4 +230,12 @@ img {
   justify-content: center;
   margin-bottom: 20px;
   color: rgb(17, 0, 255);
+}
+
+@media screen and (max-width: 1200px) {
+  .contenedor{max-width: 80%;}
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor{max-width: 90%;}
 }
