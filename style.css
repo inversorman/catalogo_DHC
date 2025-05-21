@@ -77,6 +77,8 @@ img {
   /* es la caja que usamos para que el contenido no ocupe todo el espacio */
   max-width: 90%; /*porcentaje que va ocupar */
   margin: auto; /*centrado */
+  background-color: aqua;
+  
 }
 
 .imgfluid {
@@ -119,7 +121,7 @@ img {
   max-width: 75%;
 }
 
-.col_33 {
+.col-33 {
   /* este estilo se ha creado para ordenar las fotos de la seccion ofertas 16.666 es porque eso sale de dividir 100 entre las 6 fotos que quiero por fila*/
   flex-basis: 33.33%;
   max-width: 33.33%;
@@ -140,7 +142,7 @@ img {
   flex-basis: 100%;
   max-width: 100%;
 }
-.image_cat {
+.image_borde {
   border-style: groove;
   border-width: 1px;
   border-color: var(--color-blancoAzulado);
@@ -185,8 +187,25 @@ img {
   text-align: center;
 }
 
-#ofertas .col{
+.image-box{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  max-width: 70%;
+  background-color: blue;
+  margin-bottom: 20px;
+}
+
+#ofertas .col-75{
   margin-bottom:30px ;
+}
+
+#ofertas .contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 .titulo_galeria{                           /* esta clase le da estilo al titulo de la seccion ofertas */
@@ -195,17 +214,22 @@ img {
   margin-bottom: 50px;
 }
 
+.texto-tina{
+  text-align: center;
+}
+
+
+
 /* ESTILO PARA FORMATEAR LA SECCION GARANTIA*/
 
-.garantia{                                      /* esta clase le da estilo a la seccion garantía */
+#garantia .col{                                      /* esta clase le da estilo a la seccion garantía */
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  /* justify-content: space-between; */
   align-items: center;
-  max-width:70%;
   margin: auto;    
   padding-top:10px;
-  
+   
 }
 
 .garantia_contenido{                             /* esta clase le da estilo al texto de la seccion garantia */
