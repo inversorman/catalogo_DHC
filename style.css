@@ -53,6 +53,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 2em;
+ 
 }
 
 img {
@@ -69,8 +70,8 @@ img {
 
 .espaciado {
   /* esta clase agrega un espacio arriba y abajo del contenido de la seccion */
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .contenedor {
@@ -121,6 +122,12 @@ img {
   max-width: 75%;
 }
 
+.col-45 {
+  flex-basis: 45%;
+  max-width: 45%;
+}
+
+
 .col-33 {
   /* este estilo se ha creado para ordenar las fotos de la seccion ofertas 16.666 es porque eso sale de dividir 100 entre las 6 fotos que quiero por fila*/
   flex-basis: 33.33%;
@@ -146,7 +153,7 @@ img {
   border-style: groove;
   border-width: 1px;
   border-color: var(--color-blancoAzulado);
-  box-shadow: 10px 10px 10px 10px rgba(128, 128, 128, 0.529);
+  box-shadow: 5px 5px 15px  rgba(128, 128, 128, 0.4);
 }
 
 #banner{                                      
@@ -159,12 +166,15 @@ img {
 }
 .banner_box{
   width: 1000px;                     /* esta clase le da formato a la caja del banner */
-  height: 300px;
+  height: 500px;
   margin: auto;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   
 }
 
-.titulo_banner{                       /* esta clase le da estilo al titulo del banner */
+.titulo_banner h1{                       /* esta clase le da estilo al titulo del banner */
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -177,24 +187,47 @@ img {
   padding-bottom: 50px;
 }
 
-.texto_banner{   
-  padding-top: 20px;                             /* esta clase le da estilo al texto del banner */
+.texto_banner p{   
+                              /* esta clase le da estilo al texto del banner */
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2em;
   color: rgb(233, 218, 6);  
-  text-align: center;
+  text-align:center;
 }
 
+.contenedor-galeria {
+  /* es la caja que usamos para que el contenido no ocupe todo el espacio */
+  max-width: 95%; /*porcentaje que va ocupar */
+  margin: auto; /*centrado */
+  /* background-color: aqua; */
+  
+}
+#ofertas{
+   background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 40%, rgba(254, 254, 255, 0.5) 100%),url('/images/fondo_agua.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+  
+  
+}
+.image-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .image-box{
+  padding: 10px;
   display: flex;
   flex-direction: row;
   align-items:center;
   justify-content: center;
   max-width: 70%;
-  background-color: blue;
-  margin-bottom: 20px;
+  /* background-color: blue; */
+  margin-bottom: 30px;
+  background-color: white;
 }
 
 #ofertas .col-75{
@@ -257,7 +290,7 @@ img {
 }
 
 @media screen and (max-width: 1200px) {
-  .contenedor{max-width: 80%;}
+  .contenedor{max-width: 90%;}
 }
 
 @media screen and (max-width: 768px) {
